@@ -1,0 +1,44 @@
+digraph UML {
+  rankdir=LR; nodesep=0.45; ranksep=0.55; splines=true;
+  node [shape=plaintext, fontname="Helvetica", fontsize=13];
+  edge [fontname="Helvetica", fontsize=12];
+
+  Sujeto [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="5" BGCOLOR="#EAF2FB">
+    <TR><TD BORDER="1" SIDES="B"><I>&laquo;interface&raquo;</I><BR/><B>Sujeto</B></TD></TR>
+    <TR><TD ALIGN="LEFT">+ registrar(o: Observador)<BR ALIGN="LEFT"/>+ eliminar(o: Observador)<BR ALIGN="LEFT"/>+ notificar()<BR ALIGN="LEFT"/></TD></TR></TABLE>>];
+
+  Reportero [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="5" BGCOLOR="#EAF2FB">
+    <TR><TD BORDER="1" SIDES="B"><B>Reportero</B><BR/>(Sujeto concreto)</TD></TR>
+    <TR><TD ALIGN="LEFT" BORDER="1" SIDES="B">- nombre: String<BR ALIGN="LEFT"/>- observadores: List&lt;Observador&gt;<BR ALIGN="LEFT"/>- ultimaNoticia: Noticia<BR ALIGN="LEFT"/></TD></TR>
+    <TR><TD ALIGN="LEFT">+ registrar(o: Observador)<BR ALIGN="LEFT"/>+ eliminar(o: Observador)<BR ALIGN="LEFT"/>+ notificar()<BR ALIGN="LEFT"/>+ publicarNoticia(titular: String)<BR ALIGN="LEFT"/></TD></TR></TABLE>>];
+
+  Observador [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="5" BGCOLOR="#FFF4E0">
+    <TR><TD BORDER="1" SIDES="B"><I>&laquo;interface&raquo;</I><BR/><B>Observador</B></TD></TR>
+    <TR><TD ALIGN="LEFT">+ actualizar(n: Noticia)<BR ALIGN="LEFT"/>+ getNombre(): String<BR ALIGN="LEFT"/></TD></TR></TABLE>>];
+
+  CanalWeb [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="5" BGCOLOR="#FFF4E0">
+    <TR><TD BORDER="1" SIDES="B"><B>CanalWeb</B></TD></TR>
+    <TR><TD ALIGN="LEFT">+ actualizar(n: Noticia)<BR ALIGN="LEFT"/></TD></TR></TABLE>>];
+  CanalTV [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="5" BGCOLOR="#FFF4E0">
+    <TR><TD BORDER="1" SIDES="B"><B>CanalTV</B></TD></TR>
+    <TR><TD ALIGN="LEFT">+ actualizar(n: Noticia)<BR ALIGN="LEFT"/></TD></TR></TABLE>>];
+  NotificacionApp [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="5" BGCOLOR="#FFF4E0">
+    <TR><TD BORDER="1" SIDES="B"><B>NotificacionApp</B></TD></TR>
+    <TR><TD ALIGN="LEFT">+ actualizar(n: Noticia)<BR ALIGN="LEFT"/></TD></TR></TABLE>>];
+
+  Noticia [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="5" BGCOLOR="#EEF7EE">
+    <TR><TD BORDER="1" SIDES="B"><I>&laquo;record&raquo;</I><BR/><B>Noticia</B></TD></TR>
+    <TR><TD ALIGN="LEFT">reportero: String<BR ALIGN="LEFT"/>titular: String<BR ALIGN="LEFT"/></TD></TR></TABLE>>];
+
+  Reportero -> Sujeto [arrowhead=empty, style=dashed, label=" implements"];
+  Reportero -> Observador [dir=back, arrowtail=odiamond, arrowhead=none, headlabel="0..*  ", label="observadores"];
+  CanalWeb -> Observador [arrowhead=empty, style=dashed];
+  CanalTV -> Observador [arrowhead=empty, style=dashed];
+  NotificacionApp -> Observador [arrowhead=empty, style=dashed];
+  Reportero -> Noticia [arrowhead=vee, style=dashed, label=" crea"];
+  Observador -> Noticia [arrowhead=vee, style=dashed, label=" recibe"];
+//RANKS//
+  {rank=same; Sujeto; Reportero}
+  {rank=same; Observador}
+  {rank=same; CanalWeb; CanalTV; NotificacionApp}
+}

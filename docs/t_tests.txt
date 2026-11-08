@@ -1,0 +1,15 @@
+=== Pruebas del patron Observer ===
+  [OK]    T01 R1 notifica a Web, TV y App en orden de suscripcion
+  [OK]    T02 Un reportero solo notifica a sus suscritos (solo Web)
+  [OK]    T03 Tras eliminar() un canal deja de recibir noticias
+  [OK]    T04 Registrar dos veces el mismo observador no duplica la notificacion
+  [OK]    T05 Registrar null se ignora sin lanzar excepcion
+  [OK]    T06 Sin observadores, publicar no falla ni imprime
+  [OK]    T07 Un mismo canal observa a varios reporteros
+  [OK]    T08 Baja de un observador durante la notificacion no rompe la iteracion
+  [OK]    T09 Un observador que falla no impide notificar a los demas
+  [OK]    T10 Extensibilidad: un canal nuevo recibe noticias sin tocar Reportero
+  [OK]    T11 La Noticia es inmutable y conserva reportero y titular
+  [OK]    T12 ARQUITECTURA: el paquete sujeto no depende de canales concretos
+
+Resultado: 12/12 pruebas superadas

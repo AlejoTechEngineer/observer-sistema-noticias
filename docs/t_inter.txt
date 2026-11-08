@@ -1,0 +1,20 @@
+=== Sistema de noticias (Patron Observer) ===
+1) Reportero 1  [suscritos: Web TV App]
+2) Reportero 2  [suscritos: TV App]
+3) Reportero 3  [suscritos: Web]
+4) Reportero 4  [suscritos: Web TV]
+Escriba: <n reportero> <titular>   (ej. 1 La bolsa ha caído)   |   'salir' para terminar
+> 1 La bolsa ha caído
+Esperando noticia: Reportero 1 - La bolsa ha caído
+Web - La bolsa ha caído
+TV - La bolsa ha caído
+App - La bolsa ha caído
+
+> 3 El Real Madrid de nuevo gana la Champions
+Esperando noticia: Reportero 3 - El Real Madrid de nuevo gana la Champions
+Web - El Real Madrid de nuevo gana la Champions
+
+> 9 hola
+Entrada no valida. Formato: <1-4> <titular>
+> salir
+Fin de la simulacion.

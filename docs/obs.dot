@@ -1,0 +1,13 @@
+digraph O {
+  rankdir=LR; nodesep=0.35; ranksep=1.2;
+  node [shape=box, style="rounded,filled", fontname="Helvetica", fontsize=14];
+  edge [color="#1E8449"];
+  subgraph cluster_r { label="Sujetos concretos"; fontname="Helvetica"; style=dashed;
+    R1 [label="Reportero 1", fillcolor="#EAF2FB"]; R2 [label="Reportero 2", fillcolor="#EAF2FB"];
+    R3 [label="Reportero 3", fillcolor="#EAF2FB"]; R4 [label="Reportero 4", fillcolor="#EAF2FB"]; }
+  I [label="<<interface>>\nObservador", fillcolor="#FDEBD0", shape=box, style="filled"];
+  subgraph cluster_s { label="Observadores concretos"; fontname="Helvetica"; style=dashed;
+    W [label="CanalWeb", fillcolor="#FFF4E0"]; T [label="CanalTV", fillcolor="#FFF4E0"]; A [label="NotificacionApp", fillcolor="#FFF4E0"]; }
+  R1 -> I; R2 -> I; R3 -> I; R4 -> I;
+  I -> W [style=dashed, arrowhead=empty]; I -> T [style=dashed, arrowhead=empty]; I -> A [style=dashed, arrowhead=empty];
+}

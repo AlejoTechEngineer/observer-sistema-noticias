@@ -1,0 +1,14 @@
+digraph B {
+  rankdir=LR; nodesep=0.35; ranksep=1.6;
+  node [shape=box, style="rounded,filled", fontname="Helvetica", fontsize=14];
+  edge [color="#C0392B"];
+  subgraph cluster_r { label="Reporteros"; fontname="Helvetica"; style=dashed;
+    R1 [label="Reportero 1", fillcolor="#EAF2FB"]; R2 [label="Reportero 2", fillcolor="#EAF2FB"];
+    R3 [label="Reportero 3", fillcolor="#EAF2FB"]; R4 [label="Reportero 4", fillcolor="#EAF2FB"]; }
+  subgraph cluster_s { label="Salidas (clases concretas)"; fontname="Helvetica"; style=dashed;
+    W [label="Web", fillcolor="#FFF4E0"]; T [label="TV Channel", fillcolor="#FFF4E0"]; A [label="App movil", fillcolor="#FFF4E0"]; }
+  R1 -> W; R1 -> T; R1 -> A;
+  R2 -> T; R2 -> A;
+  R3 -> W;
+  R4 -> W; R4 -> T;
+}

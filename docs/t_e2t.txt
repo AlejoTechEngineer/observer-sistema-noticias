@@ -1,0 +1,3 @@
+  [FALLO] T09 Un observador que falla no impide notificar a los demas
+Resultado: 11/12 pruebas superadas
+Fallos: [T09 Un observador que falla no impide notificar a los demas]

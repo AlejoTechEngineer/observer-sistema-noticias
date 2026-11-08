@@ -1,0 +1,3 @@
+  [FALLO] T12 ARQUITECTURA: el paquete sujeto no depende de canales concretos
+Resultado: 11/12 pruebas superadas
+Fallos: [T12 ARQUITECTURA: el paquete sujeto no depende de canales concretos]

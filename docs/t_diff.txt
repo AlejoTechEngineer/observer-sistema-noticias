@@ -1,0 +1,2 @@
+diff sin patrón vs Observer: exit=0 (salidas idénticas)
+diff PropertyChangeSupport vs Observer: exit=0 (salidas idénticas)

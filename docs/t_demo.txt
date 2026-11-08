@@ -1,0 +1,16 @@
+Esperando noticia: Reportero 1 - La bolsa ha caído
+Web - La bolsa ha caído
+TV - La bolsa ha caído
+App - La bolsa ha caído
+
+Esperando noticia: Reportero 3 - El Real Madrid de nuevo gana la Champions
+Web - El Real Madrid de nuevo gana la Champions
+
+Esperando noticia: Reportero 2 - Nueva actualización de la app disponible
+TV - Nueva actualización de la app disponible
+App - Nueva actualización de la app disponible
+
+Esperando noticia: Reportero 4 - Lluvias intensas en Bogotá esta semana
+Web - Lluvias intensas en Bogotá esta semana
+TV - Lluvias intensas en Bogotá esta semana
+
