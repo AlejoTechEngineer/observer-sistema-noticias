@@ -72,7 +72,7 @@ classDiagram
 | `etapa2_extension/` | Extensión con `CanalEmail` sin tocar el sujeto |
 | `etapa3_pruebas/` | Suite `PruebasObserver` con 12 pruebas (T01–T12) |
 | `etapa4_alternativa/` | Implementación con `PropertyChangeSupport` del JDK |
-| `docs/` | Diagramas UML (`.dot` / `.png`), capturas y trazas de ejecución |
+| `docs/` | Informe final en PDF ([`Desarrollo_Actividad2_Alejandro_De_Mendoza_Final.pdf`](docs/Desarrollo_Actividad2_Alejandro_De_Mendoza_Final.pdf)), diagramas UML (`.dot` / `.png`), capturas y trazas de ejecución |
 
 ## Ejecución
 
